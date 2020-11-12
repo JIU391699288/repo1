@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<select name="" id="selectid">
+    <!--<option value="">广东</option>-->
+    <!--<option value="">广西</option>-->
+    <!--<option value="">湖南</option>-->
+</select>
+
+<script>
+    $.post("/demo01",function (data) {
+        //alert(data)
+        //[{"pid":1,"pname":"广东"},{"pid":2,"pname":"湖北"}]
+        $(data).each(function (index,obj) {//obj-{"pid":1,"pname":"广东"}
+            $("#selectid").append("<option>"+obj.pname+"</option>");
+        })
+    },"json")
+</script>
+</body>
+</html>

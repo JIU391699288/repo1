@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/day03_request/day03_request.iml" filepath="$PROJECT_DIR$/day03_request/day03_request.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day04_cookie/day04_cookie.iml" filepath="$PROJECT_DIR$/day04_cookie/day04_cookie.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day05_cookie_session/day05_cookie_session.iml" filepath="$PROJECT_DIR$/day05_cookie_session/day05_cookie_session.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day05_ele/day05_ele.iml" filepath="$PROJECT_DIR$/day05_ele/day05_ele.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06_ajax&amp;json/day06_ajax&amp;json.iml" filepath="$PROJECT_DIR$/day06_ajax&amp;json/day06_ajax&amp;json.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day06_ajax_json/day06_ajax_json.iml" filepath="$PROJECT_DIR$/day06_ajax_json/day06_ajax_json.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day07_redis/day07_redis.iml" filepath="$PROJECT_DIR$/day07_redis/day07_redis.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day08-考试/day08-考试.iml" filepath="$PROJECT_DIR$/day08-考试/day08-考试.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day_05_案例/day_05_案例.iml" filepath="$PROJECT_DIR$/day_05_案例/day_05_案例.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day_05案例/day_05案例.iml" filepath="$PROJECT_DIR$/day_05案例/day_05案例.iml" />
+      <module fileurl="file://$PROJECT_DIR$/day_06案例/day_06案例.iml" filepath="$PROJECT_DIR$/day_06案例/day_06案例.iml" />
+      <module fileurl="file://$PROJECT_DIR$/guanlixitong/guanlixitong.iml" filepath="$PROJECT_DIR$/guanlixitong/guanlixitong.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test/test.iml" filepath="$PROJECT_DIR$/test/test.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test1/test1.iml" filepath="$PROJECT_DIR$/test1/test1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test2/test2.iml" filepath="$PROJECT_DIR$/test2/test2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test3/test3.iml" filepath="$PROJECT_DIR$/test3/test3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test4/test4.iml" filepath="$PROJECT_DIR$/test4/test4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test5/test5.iml" filepath="$PROJECT_DIR$/test5/test5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test6/test6.iml" filepath="$PROJECT_DIR$/test6/test6.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test7/test7.iml" filepath="$PROJECT_DIR$/test7/test7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/test8/test8.iml" filepath="$PROJECT_DIR$/test8/test8.iml" />
+    </modules>
+  </component>
+</project>

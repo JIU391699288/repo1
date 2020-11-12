@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<center>
+    <h1>用户注册页面</h1>
+    <table border="1px" width="500px">
+        <tr>
+            <td>用户名:</td>
+            <td><input type="text" id="username" onblur="checkUserName(this)"  />
+                <span id="usernamespan"></span>
+            </td>
+        </tr>
+
+        <tr>
+            <td>密码:</td>
+            <td><input type="password" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>邮箱:</td>
+            <td><input type="password" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>电话:</td>
+            <td><input type="password" />
+            </td>
+        </tr>
+
+        <tr>
+            <td><input id="submitId" type="button" value="注册"/></td>
+        </tr>
+
+    </table>
+</center>
+</body>
+
+<script>
+    //1.给用户名输入框设置失去焦点(onblur)事件,创建一个checkUserName()的函数响应这个事件
+    function checkUserName(obj) {
+        //2.获得用户输入的用户名
+       var username =  obj.value;
+
+       //3.发送Ajax请求服务器(UserServlet),获得响应的结果
+        //a. 创建异步请求的对象
+        var xmlhttp;
+        if (window.XMLHttpRequest)
+        {// code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp=new XMLHttpRequest();
+        }
+        else
+        {// code for IE6, IE5
+            xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        //b.打开链接
+        xmlhttp.open("get","/demo01?username="+username);
+
+        //c. 发送请求
+        xmlhttp.send();
+
+        //d. 设置xmlhttp对象状态改变监听函数
+        xmlhttp.onreadystatechange = function () {
+            if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                //e. 根据响应的结果, 给用户提示
+                var result =  xmlhttp.responseText;
+                if (result == "true"){
+                    //可用
+                    document.getElementById("usernamespan").innerHTML = "<font color='green'>恭喜!用户名可用!</font>";
+                    //注册按钮可以点击
+                    //document.getElementById("submitId").removeAttribute("disabled");
+                }else{
+                    //不可以用
+                    document.getElementById("usernamespan").innerHTML = "<font color='red'>用户名已存在!</font>";
+                    //注册按钮不可以点击
+                    //document.getElementById("submitId").setAttribute("disabled","disabled");
+
+                }
+
+            }
+        };
+
+
+    }
+
+</script>
+
+</html>

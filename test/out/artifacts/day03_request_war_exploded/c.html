@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img src="/Demo03" onclick="f(this)">
+
+</body>
+<script>
+    function f(obj) {
+        obj.src="/Demo03?img="+new Date().getMilliseconds();
+    }
+</script>
+</html>

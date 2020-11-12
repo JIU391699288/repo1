@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="jquery-3.3.1.min.js"></script>
+
+</head>
+<body>
+<center>
+
+    <h1>知领</h1>
+
+    <input id="inputId" type="text" style="width: 500px; height: 38px;" />
+    <input type="button" style="height: 38px;" value="知领一下" />
+    <div id="divId"
+         style="width: 500px; border: 0px; height: 300px; position: absolute; left: 394px; display: none">
+        <table id="tabId" width="100%" height="100%"  border="1px">
+            <!--<tr><td>aaaa</td></tr>
+            <tr><td>bbbb</td></tr>
+            <tr><td>cccc</td></tr>
+            <tr><td>dddd</td></tr>
+            <tr><td>eeee</td></tr>-->
+        </table>
+    </div>
+</center>
+<script>
+    //获得table对象
+    var tabEle =  $("#tabId");
+
+    //给输入框设置键盘抬起事件
+    $("#inputId").keyup(function () {
+        //把之前的内容清空
+        tabEle.html("");
+
+        //获得用户输入内容
+        var keyWord  = this.value;
+        if (keyWord == ""){
+            //隐藏div
+            $("#divId").hide();
+            return;
+        }
+        //发送Ajax请求服务器  第四个参数: 因为需要的数据是json格式, 没有写的话,就是文本了
+        $.get("/demo02",{key:keyWord},function (result) {
+            //展示div
+            $("#divId").show(100);
+            //解析result, 填充页面
+            //每遍历一次 就是一个词语, 就是一行
+            $(result).each(function (i,obj) {
+                tabEle.append("<tr><td>"+obj.word+"</td></tr>");
+            });
+
+        },"json");
+
+    });
+    
+
+</script>
+</body>
+</html>
